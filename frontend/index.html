@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Simulator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>CPU Scheduling Simulator</h1>
+        <p>Operating System Scheduling Algorithm Visualization</p>
+    </header>
+
+    <!-- Process Input -->
+    <!-- Process Input -->
+<section class="card">
+
+    <h2>Process Input</h2>
+
+    <div class="input-grid">
+
+        <input type="text" id="pid" placeholder="Process ID">
+
+        <input type="number" id="arrival" placeholder="Arrival Time">
+
+        <input type="number" id="burst" placeholder="Burst Time">
+
+        <input type="number" id="priority" placeholder="Priority">
+
+        <button id="addProcessBtn">Add Process</button>
+
+    </div>
+
+</section>
+
+    <!-- Algorithm -->
+
+    <section class="card">
+
+    <h2>Algorithm Configuration</h2>
+
+    <div class="controls">
+
+        <select id="algorithm">
+
+            <option>FCFS</option>
+            <option>SJF</option>
+            <option>SRTF</option>
+            <option>Priority</option>
+            <option>Round Robin</option>
+
+        </select>
+
+        <input
+            type="number"
+            id="timeQuantum"
+            placeholder="Time Quantum"
+            value="2"
+        >
+
+        <button id="runBtn">Run Simulation</button>
+
+        <button id="clearBtn">Clear All</button>
+
+    </div>
+
+</section>
+
+    <!-- Process Table -->
+
+    <section class="card">
+
+        <h2>Processes</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>PID</th>
+                <th>Arrival</th>
+                <th>Burst</th>
+                <th>Priority</th>
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+           <tbody id="processTableBody">
+
+</tbody>
+
+        </table>
+
+    </section>
+
+    <!-- Gantt -->
+
+    <section class="card">
+
+        <h2>Gantt Chart</h2>
+         <div id="gantt">
+
+           No simulation yet.
+
+        </div>
+
+    </section>
+    <section class="card">
+
+    <h2>Simulation Result</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>PID</th>
+                <th>Arrival</th>
+                <th>Burst</th>
+                <th>Completion</th>
+                <th>Turnaround</th>
+                <th>Waiting</th>
+                <th>Response</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="resultTableBody">
+
+        </tbody>
+
+    </table>
+
+</section>
+
+    <!-- Statistics -->
+
+    <section class="card">
+
+        <h2>Statistics</h2>
+
+        <div class="stats">
+
+    <div class="stat-box">
+        <h3>Average Waiting</h3>
+        <p id="avgWaiting">0</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>Average Turnaround</h3>
+        <p id="avgTurnaround">0</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>CPU Utilization</h3>
+        <p id="cpuUtilization">0%</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>Throughput</h3>
+        <p id="throughput">0</p>
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- Log -->
+
+    <section class="card">
+
+        <h2>Execution Log</h2>
+
+        <div id="log">
+
+            Waiting for simulation...
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="js/algorithms.js"></script>
+<script src="js/metrics.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

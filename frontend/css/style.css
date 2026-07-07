@@ -1,0 +1,201 @@
+/* ---------- Reset ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+/* ---------- Header ---------- */
+
+header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+header h1{
+    color:#1e3a8a;
+    margin-bottom:8px;
+}
+
+header p{
+    color:#666;
+}
+
+/* ---------- Card ---------- */
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#1e3a8a;
+}
+
+/* ---------- Input Grid ---------- */
+
+.input-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.input-grid input,
+.controls input,
+.controls select{
+
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+
+/* ---------- Buttons ---------- */
+
+button{
+
+    padding:10px 18px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#1d4ed8;
+}
+
+/* ---------- Controls ---------- */
+
+.controls{
+
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+/* ---------- Table ---------- */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+
+    background:#2563eb;
+    color:white;
+    padding:12px;
+}
+
+table td{
+
+    text-align:center;
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+/* ---------- Gantt ---------- */
+
+#gantt{
+
+    min-height:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:2px dashed #ccc;
+    color:#888;
+}
+
+/* ---------- Statistics ---------- */
+
+.stats{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.stat-box{
+
+    background:#2563eb;
+    color:white;
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* ---------- Log ---------- */
+
+#log{
+
+    height:180px;
+    overflow-y:auto;
+    border:1px solid #ddd;
+    padding:15px;
+    background:#fafafa;
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:900px){
+
+.input-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.stats{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.input-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.controls{
+
+flex-direction:column;
+align-items:stretch;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
